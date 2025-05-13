@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BOGO Offer Interactive - All Half-Half</title>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 400px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ff5b8c;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .offer-box {
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 20px;
+      position: relative;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    .offer-box:hover {
+      border-color: #ff5b8c;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .offer-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .badge {
+      background-color: #ff5b8c;
+      color: #fff;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      margin-left: 5px;
+    }
+
+    .most-popular {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background: #ff5b8c;
+      color: #fff;
+      padding: 4px 10px;
+      font-size: 12px;
+      border-radius: 0 0 0 8px;
+    }
+
+    .price {
+      font-weight: bold;
+      margin-top: 8px;
+      font-size: 16px;
+    }
+
+    .old-price {
+      text-decoration: line-through;
+      color: #aaa;
+      font-size: 12px;
+      margin-left: 8px;
+    }
+
+    .description {
+      font-size: 14px;
+      color: #555;
+      margin-top: 4px;
+    }
+
+    .box-content {
+      margin-top: 20px;
+      display: none;
+    }
+
+    .offer-box:hover .box-content {
+      display: block;
+    }
+
+    select {
+      margin: 6px 0;
+      padding: 6px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      width: 100%;
+    }
+
+    .row {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .half {
+      flex: 1;
+    }
+
+    .footer {
+      margin-top: 20px;
+      text-align: center;
+      color: #ff5b8c;
+      font-weight: bold;
+    }
+
+    .total {
+      margin: 10px 0;
+      text-align: right;
+      font-weight: bold;
+    }
+
+    .add-to-cart {
+      background-color: #ff5b8c;
+      color: white;
+      border: none;
+      padding: 14px;
+      width: 100%;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .powered {
+      text-align: center;
+      margin-top: 10px;
+      color: #999;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>YAY! It's BOGO</h1>
+
+    <div class="offer-box">
+      <div class="offer-header">
+        <div>
+          <strong>1 Unit</strong>
+          <span class="badge">10% Off</span>
+        </div>
+        <div class="price">$10.00 USD <span class="old-price">$24.00 USD</span></div>
+      </div>
+      <div class="description">Standard Price</div>
+      <div class="box-content">
+        <div class="row">
+          <div class="half">
+            <label>Size</label>
+            <select>
+              <option>S</option>
+              <option>M</option>
+              <option>L</option>
+            </select>
+          </div>
+          <div class="half">
+            <label>Colour</label>
+            <select>
+              <option>Black</option>
+              <option>White</option>
+              <option>Red</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="offer-box">
+      <div class="offer-header">
+        <div>
+          <strong>2 Unit</strong>
+          <span class="badge">20% Off</span>
+        </div>
+        <div class="price">$18.00 USD <span class="old-price">$24.00 USD</span></div>
+      </div>
+      <div class="most-popular">MOST POPULAR</div>
+      <div class="box-content">
+        <div class="row">
+          <div class="half">
+            <label>#1 Size</label>
+            <select>
+              <option>S</option>
+              <option>M</option>
+              <option>L</option>
+            </select>
+          </div>
+          <div class="half">
+            <label>Colour</label>
+            <select>
+              <option>Black</option>
+              <option>White</option>
+              <option>Red</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="half">
+            <label>#2 Size</label>
+            <select>
+              <option>S</option>
+              <option>M</option>
+              <option>L</option>
+            </select>
+          </div>
+          <div class="half">
+            <label>Colour</label>
+            <select>
+              <option>Black</option>
+              <option>White</option>
+              <option>Red</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="offer-box">
+      <div class="offer-header">
+        <div>
+          <strong>3 Unit</strong>
+          <span class="badge">30% Off</span>
+        </div>
+        <div class="price">$24.00 USD <span class="old-price">$24.00 USD</span></div>
+      </div>
+      <div class="box-content">
+        <div class="row">
+          <div class="half">
+            <label>#1 Size</label>
+            <select>
+              <option>S</option>
+              <option>M</option>
+              <option>L</option>
+            </select>
+          </div>
+          <div class="half">
+            <label>Colour</label>
+            <select>
+              <option>Black</option>
+              <option>White</option>
+              <option>Red</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="half">
+            <label>#2 Size</label>
+            <select>
+              <option>S</option>
+              <option>M</option>
+              <option>L</option>
+            </select>
+          </div>
+          <div class="half">
+            <label>Colour</label>
+            <select>
+              <option>Black</option>
+              <option>White</option>
+              <option>Red</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="half">
+            <label>#3 Size</label>
+            <select>
+              <option>S</option>
+              <option>M</option>
+              <option>L</option>
+            </select>
+          </div>
+          <div class="half">
+            <label>Colour</label>
+            <select>
+              <option>Black</option>
+              <option>White</option>
+              <option>Red</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">Free Delivery</div>
+    <div class="total">Total: $18.00 USD</div>
+    <button class="add-to-cart">+ Add to Cart</button>
+    <div class="powered">@ Powered by Pumper</div>
+  </div>
+
+</body>
+</html>
